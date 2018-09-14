@@ -15,6 +15,9 @@ namespace DD
             if (rayTransform == null && Camera.main != null)
                 rayTransform = Camera.main.transform;
 
+            // Move the gaze cursor to keep it in the middle of the view
+            transform.position = rayTransform.position + rayTransform.forward * depth;
+
             // Should we show or hide the gaze cursor?
             if (visibilityStrength == 0 && !hidden)
             {
