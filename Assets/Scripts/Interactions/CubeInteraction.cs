@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRStandardAssets.Utils;
 
+[RequireComponent(typeof(OVRInteractionEvent))]
 public class CubeInteraction : MonoBehaviour {
 
     OVRInteractionEvent m_InteractiveEvent;
-    VRInput m_VRInput;
     Renderer m_Renderer;
     
     [SerializeField] Color defaultColor;
